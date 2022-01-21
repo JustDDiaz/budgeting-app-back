@@ -23,7 +23,7 @@ transactions.get("/:index", (request, response) => {
 transactions.post("/", (request, response) => {
   console.log("POST to /transactions");
   transactionsArray.push(request.body);
-  response.status(201).json(bookmarksArray);
+  response.status(201).json(transactionsArray);
 });
 
 // Delete transaction
