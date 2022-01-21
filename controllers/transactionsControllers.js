@@ -43,6 +43,7 @@ transactions.put("/:index", (request, response) => {
   const { index } = request.params;
   if (transactionsArray[index]) {
     console.log(`UPDATED at ${index}`);
+    transactionsArray[index] = request.body;
     response.status(200).json(transactionsArray[index]);
   } else {
     response.status(404).json({ error: "Transaction Not Found" });
